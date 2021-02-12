@@ -1,3 +1,1 @@
-// export * from './Main'
-// export * from './Detail'
-export * from './Home'
+export { default as Home } from './Home/Home'

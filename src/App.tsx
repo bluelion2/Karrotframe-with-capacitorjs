@@ -4,7 +4,7 @@ import React from 'react'
 import { useHistory } from 'react-router'
 
 import { resetCSS } from './_reset'
-import PageHome from './Pages/Home'
+import { Home } from './Pages'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         // theme="Android"
         theme="Cupertino"
       >
-        <Screen path="/" component={PageHome} />
+        <Screen path="/" component={Home} />
         <Screen path="/detail/:id" component={Detail} />
       </Navigator>
     </>

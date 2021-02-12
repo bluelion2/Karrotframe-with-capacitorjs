@@ -5,7 +5,7 @@ import React from 'react'
 
 import { Card, TabBar } from '../../Components'
 
-const PageHome: React.FC = () => {
+const Home: React.FC = () => {
   const { push } = useNavigator()
 
   const onItemClick = (index: number) => {
@@ -33,7 +33,7 @@ const PageHome: React.FC = () => {
   )
 }
 
-export default PageHome
+export default Home
 
 const Container = styled.div`
   display: flex;

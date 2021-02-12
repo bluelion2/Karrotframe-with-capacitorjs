@@ -3,7 +3,7 @@
   "appName": "karrotframe",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
-  "webDir": "build/",
+  "webDir": "public/",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

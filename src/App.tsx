@@ -1,10 +1,9 @@
 import { css, Global } from '@emotion/react'
-import { Navigator, Screen, useNavigator, useParams } from 'karrotframe'
+import { Navigator, Screen } from 'karrotframe'
 import React from 'react'
-import { useHistory } from 'react-router'
 
 import { resetCSS } from './_reset'
-import { Home } from './Pages'
+import { Chat, Community, Detail, Home, Login, Mypage, Nearby } from './Pages'
 
 function App() {
   return (
@@ -18,31 +17,18 @@ function App() {
         // theme="Android"
         theme="Cupertino"
       >
-        <Screen path="/" component={Home} />
+        <Screen path="/" component={Login} />
+        <Screen path="/home" component={Home} />
         <Screen path="/detail/:id" component={Detail} />
+        <Screen path="/community" component={Community} />
+        <Screen path="/nearby" component={Nearby} />
+
+        <Screen path="/chat" component={Chat} />
+
+        <Screen path="/mypage" component={Mypage} />
       </Navigator>
     </>
   )
 }
 
 export default App
-
-const Detail = () => {
-  const { pop } = useNavigator()
-  const history = useHistory()
-  const params = useParams()
-
-  console.log('history', history)
-  console.log('params', params)
-
-  const onButtonClick = () => {
-    pop()
-  }
-
-  return (
-    <div>
-      디테일 화면 입니다.
-      <button onClick={onButtonClick}>홈 화면으로</button>
-    </div>
-  )
-}

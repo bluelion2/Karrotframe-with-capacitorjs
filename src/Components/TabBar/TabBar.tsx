@@ -1,25 +1,29 @@
 import styled from '@emotion/styled'
+import { useNavigator } from 'karrotframe/lib'
 import React from 'react'
-import { useHistory } from 'react-router'
 
 const TabBar = () => {
-  const { push } = useHistory()
+  const { replace } = useNavigator()
+
+  const onTabButtonClick = (route: string) => {
+    replace(route)
+  }
 
   return (
     <Wrap>
-      <button className="navigation-button-wrap" onClick={() => push('/?tab=home')}>
+      <button className="navigation-button-wrap" onClick={() => onTabButtonClick('/home')}>
         <p>홈</p>
       </button>
-      <button className="navigation-button-wrap" onClick={() => push('/?tab=community')}>
+      <button className="navigation-button-wrap" onClick={() => onTabButtonClick('/community')}>
         <p>동네 생활</p>
       </button>
-      <button className="navigation-button-wrap" onClick={() => push('/?tab=nearby')}>
+      <button className="navigation-button-wrap" onClick={() => onTabButtonClick('/nearby')}>
         <p>내 근처</p>
       </button>
-      <button className="navigation-button-wrap" onClick={() => push('/?tab=chat')}>
+      <button className="navigation-button-wrap" onClick={() => onTabButtonClick('/chat')}>
         <p>채팅</p>
       </button>
-      <button className="navigation-button-wrap" onClick={() => push('/?tab=mypage')}>
+      <button className="navigation-button-wrap" onClick={() => onTabButtonClick('/mypage')}>
         <p>나의 당근</p>
       </button>
     </Wrap>

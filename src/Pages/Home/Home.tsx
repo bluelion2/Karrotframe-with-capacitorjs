@@ -8,13 +8,14 @@ import { Card, TabBar } from '../../Components'
 const Home: React.FC = () => {
   const { push } = useNavigator()
 
-  const onItemClick = (index: number) => {
-    push(`/detail/${index}`)
+  const onItemClick = async (index: number) => {
+    const data = await push(`/detail/${index}`)
+    console.log('return data is', data)
   }
 
   return (
     <Container>
-      <ScreenHelmet title="안녕 타이틀" />
+      <ScreenHelmet title="물건 리스트" />
       <Main>
         {new Array(20).fill(null).map((v, i) => (
           <Card
@@ -22,13 +23,11 @@ const Home: React.FC = () => {
             key={i}
             caption={`${i + 1}번째 물건!`}
             price={`${i * 5000}`}
-            onClick={() => onItemClick(i)}
+            onClick={() => onItemClick(i + 1)}
           />
         ))}
       </Main>
-      <Bottom>
-        <TabBar />
-      </Bottom>
+      <TabBar />
     </Container>
   )
 }
@@ -45,5 +44,3 @@ const Main = styled.div`
   flex: 1;
   overflow-y: scroll;
 `
-
-const Bottom = styled.div``

@@ -1,1 +1,7 @@
 export { default as Home } from './Home/Home'
+export { default as Detail } from './Detail/Detail'
+export { default as Login } from './Login/Login'
+export { default as Chat } from './Chat/Chat'
+export { default as Community } from './Community/Community'
+export { default as Nearby } from './Nearby/Nearby'
+export { default as Mypage } from './Mypage/Mypage'

@@ -30,8 +30,11 @@
   - build를 하게되면 해당 apk 파일이 하단 경로에 생깁니다.
   `/android/app/build/outputs/apk/app-debug.apk`
 
-  - 참고 : [link](https://capacitorjs.com/docs/android)
+  - 결과물
+    ![android build](https://user-images.githubusercontent.com/34129711/107851940-c23abb00-6e50-11eb-946f-ce7d810e732a.gif)
 
+  - 참고 [link](https://capacitorjs.com/docs/android)
 
 - IOS
+  - IOS는 이슈가 있어서 확인중....
   - [link](https://capacitorjs.com/docs/ios)

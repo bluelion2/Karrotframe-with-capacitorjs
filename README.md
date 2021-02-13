@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+#  가까운 지역거래는 가지마켓 
+(당근마켓 카피 프로젝트)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## KarrotFrame + CapacitorJS를 이용한 하이브리드 앱 만들기
 
-In the project directory, you can run:
+- [당근마켓 프론트앤드 채용 세션](https://www.youtube.com/watch?v=EZOW5tE4CE0&t=4793s)에서 나온 KarrotFrame을 가지고 카피프로젝트를 만들어봤습니다.
+- CRA + TS + emotionJS를 이용해 웹 개발 후, CapacitorJS를 이용해 Android, IOS 하이브리드 앱을 만들어 보았습니다. CapacitorJS는 기존 Ionic에서 Cordova를 대체해서 새롭게 나온 하이브리드 앱을 만들수 있는 툴입니다.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Deploy
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 공통
+  - Capacitor를 공식문서에 따라서 설치하시면 됩니다. [link](https://capacitorjs.com/docs/getting-started)
+  - CRA로 작업시 index.html이 /public에 있습니다. capacitor를 설치하면 생성되는  capacitor.config.json 에서 webdir을 public/으로 수정하시면 됩니다.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Android
+  - 안드로이드의 경우 Android Studio가 있어야 합니다.
+  ```
+  - npx cap add android 
+  - npx cap sync
+  - npx cap copy
+  - npx cap open android
+  ```
+  - 해당 명령을 실행하면 root 경로에 android 파일이 생성되고 Android Studio가 열립니다.
+  - 사진과 같은 경로에서 build를 해서 apk를 생성할 수 있습니다.
+  <img width="1680" alt="스크린샷 2021-02-12 오후 7 26 52" src="https://user-images.githubusercontent.com/34129711/107757084-6ac12000-6d68-11eb-8c0f-bc3d64945dbe.png">
+  - build를 하게되면 해당 apk 파일이 하단 경로에 생깁니다.
+  `/android/app/build/outputs/apk/app-debug.apk`
 
-### `yarn build`
+  - 참고 : [link](https://capacitorjs.com/docs/android)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- IOS
+  - [link](https://capacitorjs.com/docs/ios)

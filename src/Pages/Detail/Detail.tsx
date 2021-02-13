@@ -1,6 +1,7 @@
-import styled from '@emotion/styled'
 import { ScreenHelmet, useParams } from 'karrotframe'
 import React from 'react'
+
+import { Container } from '../../Layouts'
 
 const Detail: React.FC = () => {
   const params = useParams<{ id?: string }>()
@@ -14,5 +15,3 @@ const Detail: React.FC = () => {
 }
 
 export default Detail
-
-const Container = styled.div``

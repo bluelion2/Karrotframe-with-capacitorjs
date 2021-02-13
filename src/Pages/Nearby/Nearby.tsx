@@ -1,8 +1,8 @@
-import styled from '@emotion/styled'
 import { ScreenHelmet } from 'karrotframe'
 import React from 'react'
 
 import { TabBar } from '../../Components'
+import { Container, Main } from '../../Layouts'
 
 const Nearby: React.FC = () => {
   return (
@@ -15,13 +15,3 @@ const Nearby: React.FC = () => {
 }
 
 export default Nearby
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
-
-const Main = styled.div`
-  flex: 1;
-`

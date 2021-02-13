@@ -1,9 +1,9 @@
-import styled from '@emotion/styled'
 import { useNavigator } from 'karrotframe'
 import { ScreenHelmet } from 'karrotframe/lib'
 import React from 'react'
 
 import { Card, TabBar } from '../../Components'
+import { Container, Main } from '../../Layouts'
 
 const Home: React.FC = () => {
   const { push } = useNavigator()
@@ -33,14 +33,3 @@ const Home: React.FC = () => {
 }
 
 export default Home
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
-
-const Main = styled.div`
-  flex: 1;
-  overflow-y: scroll;
-`

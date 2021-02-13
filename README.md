@@ -13,7 +13,7 @@
 
 - 공통
   - Capacitor를 공식문서에 따라서 설치하시면 됩니다. [link](https://capacitorjs.com/docs/getting-started)
-  - CRA로 작업시 index.html이 /public에 있습니다. capacitor를 설치하면 생성되는  capacitor.config.json 에서 webdir을 public/으로 수정하시면 됩니다.
+  - CRA로 작업시 index.html이 /public에 있습니다. capacitor를 설치하면 생성되는  capacitor.config.json 에서 webdir을 build으로 수정하시면 됩니다.
 
 
 - Android

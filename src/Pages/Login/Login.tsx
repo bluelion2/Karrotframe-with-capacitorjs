@@ -19,10 +19,10 @@ const Login: React.FC = () => {
   return (
     <Container>
       <h2>어서오세요!</h2>
-      <Form onClick={onSubmit}>
+      <Form>
         <input value={id} onChange={(e) => setId(e.target.value)} />
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
-        <Submit type="submit">로그인!</Submit>
+        <Submit onClick={onSubmit}>로그인!</Submit>
       </Form>
     </Container>
   )

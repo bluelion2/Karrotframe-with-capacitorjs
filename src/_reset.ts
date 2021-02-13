@@ -113,32 +113,10 @@ export const resetCSS = css`
   ul {
     list-style: none;
   }
-  blockquote,
-  q {
-    quotes: none;
-  }
-  blockquote:before,
-  blockquote:after,
-  q:before,
-  q:after {
-    content: '';
-    content: none;
-  }
-  li,
-  ol {
-    list-style: none;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  [type='text'] {
-    padding: 0;
-  }
   input {
     font-size: 14px;
+    padding: 0;
+    border-width: 1px;
   }
   textarea:focus {
     outline: none;
